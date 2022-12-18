@@ -1,0 +1,7 @@
+.openzeppelin/unknown-31337.json
+vendor/
+node_modules/
+cache/
+.mypy_cache/
+.openzeppelin/unknown-*
+.env
