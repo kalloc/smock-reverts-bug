@@ -62,3 +62,5 @@ $ hardhat test
 
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
+
+Update: reported https://github.com/defi-wonderland/smock/issues/152
