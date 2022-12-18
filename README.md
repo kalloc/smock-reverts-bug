@@ -2,12 +2,40 @@
 
 # Reverted with message is not working yet
 
-Expected successful revert with a message for the nested contract call. Example test below:
+Expected successful revert with a message for the nested contract call. 
+
+Using very simple contracts:
+```solidity
+contract B {
+    int counter;
+    function test()
+    public 
+    returns(int) {
+        counter+=1;
+        return counter;
+    }
+}
+
+contract A {
+    address public b;
+    constructor() {
+        b = address(0x0000000000FFe8B47B3e2130213B802212439497);
+    }
+
+    function test() public returns(bool) {
+        return B(b).test() > 0;
+    }
+
+}
+```
+
+Example test below:
 ```typescript
 fakeB.test.reverts(`Message`);
 await expect(contract.test())
     .to.be.revertedWith("Message");
 ```
+
 
 But got error:
 
