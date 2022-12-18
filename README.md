@@ -1,6 +1,6 @@
 
 
-# Reverted with message is not working yet
+# The feature reverting with message is not working yet
 
 Expected successful revert with a message for the nested contract call. 
 
