@@ -18,8 +18,8 @@ contract B {
 
 contract A {
     address public b;
-    constructor() {
-        b = address(0x0000000000FFe8B47B3e2130213B802212439497);
+    constructor(address dep) {
+        b = dep;
     }
 
     function test() public returns(bool) {
